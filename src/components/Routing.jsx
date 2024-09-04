@@ -11,7 +11,7 @@ import Contact from './contactpage/Contact'
 
 function Routing() {
   return (
-    <div className='w-[1349px] h-[120px] absolute bg-orange-300'>
+    <div className='w-[1349px] h-[120px] absolute'>
       <div>
         <div>
             <Link to='/'>
@@ -39,10 +39,10 @@ function Routing() {
               )
             })}
         </div>
-        <div className='w-[56px] h-[56px] absolute top-[32px] left-[1086px] rounded-full bg-[#E6E6E6] border-[1px] border-[#FF8A20]'>
+        <div className='w-[56px] h-[56px] absolute top-[32px] left-[1036px] rounded-full bg-[#E6E6E6] border-[1px] border-[#FF8A20]'>
           <img className='rounded-full' src={User} alt="" />
         </div>
-        <button className='w-[hug(156px)] h-[hug(56px)] px-[32px] py-[12px] bg-[#FF8A20] absolute top-[32px] left-[1182px] rounded-[8px] font-semibold text-white'>Add Listing</button>
+        <button className='w-[154px] h-[56px] px-[32px] py-[12px] bg-[#FF8A20] absolute top-[32px] left-[1122px] rounded-[8px] font-semibold text-white'>Add Listing</button>
       </div>
 
       <Routes>
