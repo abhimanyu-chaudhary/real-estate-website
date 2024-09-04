@@ -2,7 +2,7 @@ import React from 'react'
 
 function Listings() {
     const listingData = [
-        {name: "Grand Family House", location: }
+        {name: "Grand Family House", location: "Kathmandu"}
     ]
 
   return (
