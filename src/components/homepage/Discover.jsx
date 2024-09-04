@@ -10,23 +10,26 @@ function Discover(){
                     <button className="w-[108px] h-[hug(40px)] rounded-[8px] bg-[#27AD77] py-[8px] px-[32px]">Sell</button>
                     <button className="w-[108px] h-[hug(40px)] rounded-[8px] bg-[#27AD77] py-[8px] px-[32px]">Rent</button>
                 </div>
-                <div className="w-[940px] h-[144px] bg-white text-black flex items-center justify-evenly">
+                <div className="w-[940px] h-[144px] bg-white text-black flex items-center justify-evenly rounded-[8px]">
                     <div className="flex flex-col gap-2">
-                        <h4>Location</h4>
+                        <h4 className="font-semibold">Location</h4>
                         <input type="text" placeholder="Delhi, India" className="w-[228px] h-[56px] border-[1px] border-[#CCCCCC] rounded-[8px]" />
                     </div>
                     <div className="flex flex-col gap-2">
-                        <h4>Location</h4>
+                        <h4 className="font-semibold">Type</h4>
                         <input type="text" placeholder="Delhi, India" className="w-[228px] h-[56px] border-[1px] border-[#CCCCCC] rounded-[8px]" />
                     </div>
                     <div className="flex flex-col gap-2">
-                        <h4>Location</h4>
+                        <h4 className="font-semibold">Range</h4>
                         <input type="text" placeholder="Delhi, India" className="w-[228px] h-[56px] 
                         border-[#CCCCCC] border-[1px] rounded-[8px]" />
                     </div>
-                    <button className="w-[160px] h-[56px] bg-[#FF8A20] text-white py-[12px] px-[32px] rounded-[8px]">
-                        Search &#9827;
-                    </button>
+                    <div className="flex flex-col gap-8">
+                        <p></p>
+                        <button className="w-[160px] h-[56px] bg-[#FF8A20] text-white py-[12px] px-[32px] rounded-[8px]">
+                            Search &#9827;
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>
