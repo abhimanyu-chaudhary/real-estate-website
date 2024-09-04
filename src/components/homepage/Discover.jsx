@@ -8,7 +8,7 @@ function Discover(){
             <div className="absolute top-[320px] flex flex-col items-center">
                 <div className="flex gap-[10px] z-10 bg-white w-[304px] h-[72px] items-center justify-center rounded-t-[8px] ">
                     <button className="w-[108px] h-[hug(40px)] rounded-[8px] bg-[#27AD77] py-[8px] px-[32px]">Sell</button>
-                    <button className="w-[108px] h-[hug(40px)] rounded-[8px] bg-[#27AD77] py-[8px] px-[32px]">Rent</button>
+                    <button className="w-[108px] h-[hug(40px)] rounded-[8px] text-[#27AD77] border-[1px] border-[#27AD77] py-[8px] px-[32px]">Rent</button>
                 </div>
                 <div className="w-[940px] h-[144px] bg-white text-black flex items-center justify-evenly rounded-[8px]">
                     <div className="flex flex-col gap-2">
