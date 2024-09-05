@@ -10,4 +10,8 @@
 .nunito{
     font-family: "nunito-sans";
 }
+
+.boxShadow{
+    'custom-shadow': '0px 0px 9px 1px rgba(0, 0, 0, 0.75)',
+  }
   

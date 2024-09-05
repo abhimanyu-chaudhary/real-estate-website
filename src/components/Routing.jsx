@@ -28,7 +28,7 @@ function Routing() {
               { title: "Contact", sign: '/contact'},
             ].map((elem, index) => {
               return (
-                <div >
+                <div key={index}>
                   <Link to={elem.sign} key={index}>
                     <div className='text-[#123763] font-semibold'>
                      {elem.title}

@@ -21,6 +21,9 @@ export default {
         800: '800',
         900: '900',
       },
+      boxShadow: {
+        'custom-shadow': '0px 0px 9px 1px rgba(0, 0, 0, 0.75)',
+      }
     }
   },
   plugins: [],
