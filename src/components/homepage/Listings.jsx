@@ -136,12 +136,13 @@ function Listings() {
 
   const [visibleItems, setVisibleItems] = useState(4);
 
+  console.log(visibleItems);
 
   return (
     <div className="w-[1132px] absolute top-[908px] left-[104px] ">
       <div className="flex justify-between items-center">
         <h1 className="text-[48px] font-semibold">Newest Listings</h1>
-        <button className="w-[128px] h-[56px] py-[12px] px-[32px] rounded-[8px] bg-[#FF8A20]">
+        <button onClick={() => setVisibleItems(prev => prev + 4)} className="w-[128px] h-[56px] py-[12px] px-[32px] rounded-[8px] bg-[#FF8A20]">
           View All
         </button>
       </div>
@@ -174,9 +175,11 @@ function Listings() {
         ))}
       </div>
       {visibleItems < listingData.length && (
-        <button className="w-[148px] h-[56px] py-[12px] px-[32px] rounded-[8px] bg-[#FF8A20] absolute left-[50%] -translate-x-[50%] mt-40" onClick={() => setVisibleItems( prev => prev + 4)}>
-          Show More
-        </button>
+        <div className="relative left-[50%] -translate-x-[50%] mt-20">
+            <button className="w-[148px] h-[56px] py-[12px] px-[32px] rounded-[8px] bg-[#FF8A20]" onClick={() => setVisibleItems( prev => Math.min(prev + 4, listingData.length))}>
+              Show More
+            </button>
+        </div>
       )}
     </div>
   );
