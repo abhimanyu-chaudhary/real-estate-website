@@ -3,7 +3,7 @@ import { IoLocationSharp } from "react-icons/io5";
 import { IoIosStar } from "react-icons/io";
 
 function Listings() {
-  const listingData = [
+  const [listingData, setListingData] = useState([
     {
       name: "Grand Family House",
       location: "Boudha Road, Kathmandu",
@@ -132,12 +132,16 @@ function Listings() {
       "img": "https://images.unsplash.com/photo-1456105278754-a5f20fc9ccad?q=80&w=1372&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       "shadow": false
     }    
-  ];
+  ]);
 
   const length = listingData.length;
   const [visibleItems, setVisibleItems] = useState(4);
 
   console.log(visibleItems);
+
+  const clickHandler = () => {
+
+  }
 
   return (
     <div className="w-[1132px] absolute top-[908px] left-[104px] ">
@@ -153,7 +157,7 @@ function Listings() {
             key={index}
             className={`min-w-[247px] h-[375px] p-3 rounded-[16px] ${
               item.shadow ? "shadow-custom-shadow" : ""
-            }`} onClick={}
+            }`} onClick={clickHandler}
           >
             <img
               src={item.img}
