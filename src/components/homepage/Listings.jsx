@@ -134,6 +134,7 @@ function Listings() {
     }    
   ];
 
+  const length = listingData.length;
   const [visibleItems, setVisibleItems] = useState(4);
 
   console.log(visibleItems);
@@ -152,7 +153,7 @@ function Listings() {
             key={index}
             className={`min-w-[247px] h-[375px] p-3 rounded-[16px] ${
               item.shadow ? "shadow-custom-shadow" : ""
-            }`}
+            }`} onClick={}
           >
             <img
               src={item.img}
@@ -174,9 +175,9 @@ function Listings() {
           </div>
         ))}
       </div>
-      {visibleItems < listingData.length && (
-        <div className="relative left-[50%] -translate-x-[50%] mt-20">
-            <button className="w-[148px] h-[56px] py-[12px] px-[32px] rounded-[8px] bg-[#FF8A20]" onClick={() => setVisibleItems( prev => Math.min(prev + 4, listingData.length))}>
+      {visibleItems < length && (
+        <div className="my-10">
+            <button className="w-[148px] h-[56px] py-[12px] px-[32px] rounded-[8px] bg-[#FF8A20] absolute left-[50%] -translate-x-[50%]" onClick={() => setVisibleItems( prev => Math.min(prev + 4))}>
               Show More
             </button>
         </div>
