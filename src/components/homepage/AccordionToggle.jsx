@@ -1,0 +1,37 @@
+import React from 'react'
+
+function AccordionToggle() {
+    const query = [
+        {
+          "head": "Lifetime Warranty",
+          "value": "Enjoy peace of mind with our lifetime warranty on all properties. We stand by the quality of our homes, ensuring long-term durability and value for your investment."
+        },
+        {
+          "head": "Cheapest Compared To Other Competitors",
+          "value": "Get the best deals in the market! Our prices are unbeatable, offering premium properties at the most affordable rates compared to other real estate competitors."
+        },
+        {
+          "head": "Strategic Location",
+          "value": "Find properties in prime locations, offering easy access to essential services, entertainment, and transport hubs. Live where convenience meets comfort."
+        },
+        {
+          "head": "Low Tax",
+          "value": "Benefit from low property taxes, allowing you to save more on your investment. Our properties are situated in areas with favorable tax policies for homeowners."
+        }
+      ]
+      
+  return (
+    <div>
+      {query.map(item => {
+        return (
+            <div>
+                {item.head}
+                {item.value}
+            </div>
+        )
+      })}
+    </div>
+  )
+}
+
+export default AccordionToggle;

@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { IoLocationSharp } from "react-icons/io5";
 import { IoIosStar } from "react-icons/io";
+import Accordion from "./Accordion";
 
 function Listings() {
   const listingData = [
@@ -207,6 +208,9 @@ function Listings() {
             </button>
         </div>
       )}
+      <div className="mt-40 ">
+        <Accordion />
+      </div>
     </div>
   );
 }
