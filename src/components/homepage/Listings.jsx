@@ -3,8 +3,9 @@ import { IoLocationSharp } from "react-icons/io5";
 import { IoIosStar } from "react-icons/io";
 
 function Listings() {
-  const [listingData, setListingData] = useState([
+  const listingData = [
     {
+      id: 1,
       name: "Grand Family House",
       location: "Boudha Road, Kathmandu",
       price: 350,
@@ -13,6 +14,7 @@ function Listings() {
       shadow: true,
     },
     {
+      id: 2,
       name: "The Elements",
       location: "Lakeside, Pokhara",
       price: 489,
@@ -21,6 +23,7 @@ function Listings() {
       shadow: false,
     },
     {
+      id: 3,
       name: "The Trisara",
       location: "Meena Market, Jaisalmer",
       price: 299,
@@ -29,6 +32,7 @@ function Listings() {
       shadow: false,
     },
     {
+      id: 4,
       name: "Premier Inn",
       location: "Garden of Eden, Mysuru",
       price: 548,
@@ -37,6 +41,7 @@ function Listings() {
       shadow: false,
     },
     {
+      id: 5,
       name: "Everest View Hotel",
       location: "Lukla, Solukhumbu",
       price: 500,
@@ -45,6 +50,7 @@ function Listings() {
       shadow: false,
     },
     {
+      id: 6,
       name: "Himalayan Lodge",
       location: "Thamel, Kathmandu",
       price: 120,
@@ -53,6 +59,7 @@ function Listings() {
       shadow: false,
     },
     {
+      id: 7,
       name: "Mountain Peak Resort",
       location: "Nagarkot, Bhaktapur",
       price: 400,
@@ -61,6 +68,7 @@ function Listings() {
       shadow: false,
     },
     {
+      id: 8,
       name: "Peaceful Garden Hotel",
       location: "Pokhara Lakeside, Pokhara",
       price: 150,
@@ -69,6 +77,7 @@ function Listings() {
       shadow: false,
     },
     {
+      id: 9,
       name: "Golden Temple Inn",
       location: "Patan Durbar Square, Lalitpur",
       price: 200,
@@ -77,6 +86,7 @@ function Listings() {
       shadow: false,
     },
     {
+      id: 10,
       name: "Heritage Hotel",
       location: "Bhaktapur Durbar Square, Bhaktapur",
       price: 250,
@@ -85,6 +95,7 @@ function Listings() {
       shadow: false,
     },
     {
+      id: 11,
       name: "Annapurna Hotel",
       location: "Durbar Marg, Kathmandu",
       price: 550,
@@ -93,6 +104,7 @@ function Listings() {
       shadow: false,
     },
     {
+      id: 12,
       name: "Lakeside Paradise Resort",
       location: "Begnas Lake, Pokhara",
       price: 380,
@@ -101,6 +113,7 @@ function Listings() {
       shadow: false,
     },
     {
+      id: 13,
       name: "Safari Wildlife Hotel",
       location: "Chitwan National Park, Chitwan",
       price: 330,
@@ -109,6 +122,7 @@ function Listings() {
       shadow: false,
     },
     {
+      id: 14,
       name: "Cloud Nine Boutique Hotel",
       location: "Lazimpat, Kathmandu",
       price: 480,
@@ -117,6 +131,7 @@ function Listings() {
       shadow: false,
     },
     {
+      id: 15,
       name: "Royal Mountain Lodge",
       location: "Dhampus, Kaski",
       price: 410,
@@ -125,39 +140,45 @@ function Listings() {
       shadow: false,
     },
     {
-      "name": "The Desert Villa",
-      "location": "Dhulikhel, Kavrepalanchok ",
-      "price": 500,
-      "rating": 4.5,
-      "img": "https://images.unsplash.com/photo-1456105278754-a5f20fc9ccad?q=80&w=1372&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      "shadow": false
+      id: 16,
+      name: "The Desert Villa",
+      location: "Dhulikhel, Kavrepalanchok ",
+      price: 500,
+      rating: 4.5,
+      img: "https://images.unsplash.com/photo-1456105278754-a5f20fc9ccad?q=80&w=1372&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      shadow: false
     }    
-  ]);
+  ];
 
   const length = listingData.length;
   const [visibleItems, setVisibleItems] = useState(4);
 
-  console.log(visibleItems);
+  
 
-  const clickHandler = (item) => {
-      const updatedItems = 
-  }
+
+  // const clickHandler = (id) => {
+  //     const updatedListingData = listingData.map((item) => 
+  //       item.id === id ? {...item, shadow: !item.shadow} : item
+  //     ); 
+
+  //     setListingData(updatedListingData);
+  // }
 
   return (
     <div className="w-[1132px] absolute top-[908px] left-[104px] ">
       <div className="flex justify-between items-center">
         <h1 className="text-[48px] font-semibold">Newest Listings</h1>
-        <button onClick={() => setVisibleItems(prev => prev + 4)} className="w-[128px] h-[56px] py-[12px] px-[32px] rounded-[8px] bg-[#FF8A20]">
+        <button onClick={() => setVisibleItems(length)} className="w-[128px] h-[56px] py-[12px] px-[32px] rounded-[8px] bg-[#FF8A20]">
           View All
         </button>
       </div>
       <div className="flex gap-4 py-[25px] flex-wrap ">
-        {listingData.splice(0, visibleItems).map((item, index) => (
+        {listingData.splice(0, visibleItems).map((item) => (
           <div
-            key={index}
-            className={`min-w-[247px] h-[375px] p-3 rounded-[16px] ${
+            key={item.id}
+            className={`min-w-[247px] h-[375px] cursor-pointer p-3 rounded-[16px] ${
               item.shadow ? "shadow-custom-shadow" : ""
-            }`} onClick={clickHandler(item.name)}
+            }`}
           >
             <img
               src={item.img}
@@ -179,9 +200,9 @@ function Listings() {
           </div>
         ))}
       </div>
-      {visibleItems < length && (
+      {visibleItems < length  && (
         <div className="my-10">
-            <button className="w-[148px] h-[56px] py-[12px] px-[32px] rounded-[8px] bg-[#FF8A20] absolute left-[50%] -translate-x-[50%]" onClick={() => setVisibleItems( prev => Math.min(prev + 4))}>
+            <button className="w-[148px] h-[56px] py-[12px] px-[32px] rounded-[8px] bg-[#FF8A20] absolute left-[50%] -translate-x-[50%]" onClick={() => setVisibleItems(prev => (prev + 4))}>
               Show More
             </button>
         </div>
