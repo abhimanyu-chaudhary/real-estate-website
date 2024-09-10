@@ -139,8 +139,8 @@ function Listings() {
 
   console.log(visibleItems);
 
-  const clickHandler = () => {
-
+  const clickHandler = (item) => {
+      const updatedItems = 
   }
 
   return (
@@ -157,7 +157,7 @@ function Listings() {
             key={index}
             className={`min-w-[247px] h-[375px] p-3 rounded-[16px] ${
               item.shadow ? "shadow-custom-shadow" : ""
-            }`} onClick={clickHandler}
+            }`} onClick={clickHandler(item.name)}
           >
             <img
               src={item.img}
