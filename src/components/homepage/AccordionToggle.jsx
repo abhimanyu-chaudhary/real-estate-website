@@ -1,4 +1,6 @@
 import React from 'react'
+import { FaAngleUp } from "react-icons/fa6";
+import { FaAngleDown } from "react-icons/fa6";
 
 function AccordionToggle() {
     const query = [
@@ -25,8 +27,11 @@ function AccordionToggle() {
       {query.map(item => {
         return (
             <div>
-                {item.head}
-                {item.value}
+              <div className='flex justify-between pr-5'>
+                <h1 className='font-bold'>{item.head}</h1>
+                <span className='bg-fuchsia-400 cursor-pointer'><FaAngleDown /></span>
+              </div>
+                <p className='my-2 px-5'>{item.value}</p>
             </div>
         )
       })}
