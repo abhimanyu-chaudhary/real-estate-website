@@ -11,7 +11,7 @@ function Loan() {
       </div>
       <div className='w-[608px] h-[692px] rounded-tl-[70px] rounded-bl-[70px] bg-[#27AD77]'>
         <div className='w-[600px] h-[500px] bg-[#E6E6E6] relative right-[100px] top-[100px] rounded-[16px]'>
-
+            
         </div>
       </div>
     </div>
