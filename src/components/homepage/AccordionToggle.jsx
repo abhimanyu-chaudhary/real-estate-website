@@ -40,12 +40,12 @@ function AccordionToggle() {
 
   return (
     <div>
-      {query.map(item => {
+      {query.map(item => { 
         return (
-            <div className={`min-h-[70px] ${item.toggle && "shadow-custom-shadow" } rounded-[8px] p-3 mb-4 ${!item.toggle && "border-[2px] border-slate-300"}`}>
+            <div className={`min-h-[70px] ${item.toggle && "shadow-custom-shadow" } rounded-[8px] p-3 mb-4 transition ease-in-out delay-100  origin-top ${!item.toggle && "border-[2px] border-slate-300"}`}>
               <div className='flex justify-between pr-2'>
                 <h1 className='font-bold'>{item.head}</h1>
-                <span className='cursor-pointer' onClick={() => toggleHandler(item.id)}>{item.toggle ? <FaAngleUp /> : <FaAngleDown /> }</span>
+                <span className='cursor-pointer transition ease-in-out delay-300' onClick={() => toggleHandler(item.id)}>{item.toggle ? <FaAngleUp /> : <FaAngleDown /> }</span>
               </div>
                 <p className='my-2 px-5'>{item.toggle && item.value}</p>
             </div>
