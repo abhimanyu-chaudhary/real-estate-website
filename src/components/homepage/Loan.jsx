@@ -11,7 +11,7 @@ function Loan() {
       </div>
       <div className='w-[608px] h-[692px] rounded-tl-[70px] rounded-bl-[70px] bg-[#27AD77]'>
         <div className='w-[600px] h-[500px] bg-[#E6E6E6] relative right-[100px] top-[100px] rounded-[16px]'>
-            
+            <img className='object-center' src="https://images.unsplash.com/photo-1481277542470-605612bd2d61?q=80&w=1406&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="" />
         </div>
       </div>
     </div>
