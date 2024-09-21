@@ -1,5 +1,5 @@
-import React, { useState } from 'react'
-import Listings from './Listings';
+import React, { useState } from "react";
+import Listings from "./Listings";
 import { IoLocationSharp } from "react-icons/io5";
 import { IoIosStar } from "react-icons/io";
 
@@ -27,6 +27,7 @@ function Category() {
     },
     {
       id: 3,
+      category: "Apartment",
       name: "The Trisara",
       location: "Meena Market, Jaisalmer",
       price: 299,
@@ -36,6 +37,7 @@ function Category() {
     },
     {
       id: 4,
+      category: "Houses",
       name: "Premier Inn",
       location: "Garden of Eden, Mysuru",
       price: 548,
@@ -45,6 +47,7 @@ function Category() {
     },
     {
       id: 5,
+      category: "Villa",
       name: "Everest View Hotel",
       location: "Lukla, Solukhumbu",
       price: 500,
@@ -54,6 +57,7 @@ function Category() {
     },
     {
       id: 6,
+      category: "Apartment",
       name: "Himalayan Lodge",
       location: "Thamel, Kathmandu",
       price: 120,
@@ -63,6 +67,7 @@ function Category() {
     },
     {
       id: 7,
+      category: "Houses",
       name: "Mountain Peak Resort",
       location: "Nagarkot, Bhaktapur",
       price: 400,
@@ -72,6 +77,7 @@ function Category() {
     },
     {
       id: 8,
+      category: "Villa",
       name: "Peaceful Garden Hotel",
       location: "Pokhara Lakeside, Pokhara",
       price: 150,
@@ -81,6 +87,7 @@ function Category() {
     },
     {
       id: 9,
+      category: "Apartment",
       name: "Golden Temple Inn",
       location: "Patan Durbar Square, Lalitpur",
       price: 200,
@@ -90,6 +97,7 @@ function Category() {
     },
     {
       id: 10,
+      category: "Houses",
       name: "Heritage Hotel",
       location: "Bhaktapur Durbar Square, Bhaktapur",
       price: 250,
@@ -99,6 +107,7 @@ function Category() {
     },
     {
       id: 11,
+      category: "Villa",
       name: "Annapurna Hotel",
       location: "Durbar Marg, Kathmandu",
       price: 550,
@@ -108,6 +117,7 @@ function Category() {
     },
     {
       id: 12,
+      category: "Apartment",
       name: "Lakeside Paradise Resort",
       location: "Begnas Lake, Pokhara",
       price: 380,
@@ -117,6 +127,7 @@ function Category() {
     },
     {
       id: 13,
+      category: "Houses",
       name: "Safari Wildlife Hotel",
       location: "Chitwan National Park, Chitwan",
       price: 330,
@@ -126,6 +137,7 @@ function Category() {
     },
     {
       id: 14,
+      category: "Villa",
       name: "Cloud Nine Boutique Hotel",
       location: "Lazimpat, Kathmandu",
       price: 480,
@@ -135,6 +147,7 @@ function Category() {
     },
     {
       id: 15,
+      category: "Apartment",
       name: "Royal Mountain Lodge",
       location: "Dhampus, Kaski",
       price: 410,
@@ -144,21 +157,33 @@ function Category() {
     },
     {
       id: 16,
+      category: "Houses",
       name: "The Desert Villa",
       location: "Dhulikhel, Kavrepalanchok ",
       price: 500,
       rating: 4.5,
       img: "https://images.unsplash.com/photo-1456105278754-a5f20fc9ccad?q=80&w=1372&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      shadow: false
-    }    
+      shadow: false,
+    },
   ]);
 
   const handleFilter = (val) => {
-    setListingData((prev) =>
-      prev.filter((item) => 
-        String(item.category) === String(val)  
-      ))
-  }
+    if( val == "all"){
+      setListingData((prev) => 
+        prev.map((item) => 
+          item.category === val && {...item}
+        )
+      )
+    }
+    
+    else{
+      setListingData((prev) =>
+        prev.filter((item) => (item.category) === (val))
+      );
+    }
+
+  };
+
   return (
     <div className="w-[1145px] absolute top-[3000px] left-[104px] flex flex-col justify-center items-center">
       <h1 className="text-[40px] font-semibold">Listing Categories</h1>
@@ -168,26 +193,28 @@ function Category() {
         browsing now to discover your perfect match!
       </p>
 
-      
       <div className="flex gap-2 my-7">
-              <button
-                value="home"
-                onClick={() => handleFilter('home')}
-                className="w-[121px] h-[40px] border-[1px] border-[#FF8A20] text-[#FF8A20] rounded-[8px]"
-              >
-                All
-              </button>
-              <button className="w-[121px] h-[40px] border-[1px] border-[#FF8A20] text-[#FF8A20] rounded-[8px]">
-                Houses
-              </button>
-              <button className="w-[121px] h-[40px] border-[1px] border-[#FF8A20] text-[#FF8A20] rounded-[8px]">
-                Villa
-              </button>
-              <button className="w-[121px] h-[40px] border-[1px] border-[#FF8A20] text-[#FF8A20] rounded-[8px]">
-                Apartment
-              </button>
-        </div>
-        
+        <button
+          value="home"
+          onClick={() => handleFilter("all")}
+          className="w-[121px] h-[40px] border-[1px] border-[#FF8A20] text-[#FF8A20] rounded-[8px]"
+        >
+          All
+        </button>
+        <button
+          value="Houses"
+          onClick={() => handleFilter("Houses")}
+          className="w-[121px] h-[40px] border-[1px] border-[#FF8A20] text-[#FF8A20] rounded-[8px]"
+        >
+          Houses
+        </button>
+        <button value="Villa" onClick={() => handleFilter("Villa")} className="w-[121px] h-[40px] border-[1px] border-[#FF8A20] text-[#FF8A20] rounded-[8px]">
+          Villa
+        </button>
+        <button value="Apartment" onClick={() => handleFilter("Apartment")} className="w-[121px] h-[40px] border-[1px] border-[#FF8A20] text-[#FF8A20] rounded-[8px]">
+          Apartment
+        </button>
+      </div>
 
       <div className="flex gap-4 py-[25px] flex-wrap ">
         {listingData.map((item) => (
