@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { FaStar } from "react-icons/fa";
 import { FaArrowRight } from "react-icons/fa6";
 
@@ -80,8 +80,12 @@ function Testimonials() {
     },
   ];
 
-  const num = Math.floor(Math.random()* data.length);
+  const [num, setNum] = useState(Math.floor(Math.random()* data.length));
   const rate = Math.floor(Math.random()* 3 + 1);
+
+//   const handleChange = () => {
+//     const setNum = Math.floor(Math.random()* data.length);
+//   }
 
   return (
     <div >
@@ -94,11 +98,11 @@ function Testimonials() {
                 {data[num].matter}
               </p>
               <span className="text-[30px] flex mb-4 gap-3">
-                <FaStar className="fill-[#FFC000]" />
-                <FaStar className="fill-[#FFC000]" />
-                <FaStar className="fill-[#FFC000]" />
-                <FaStar className="fill-[#FFC000]" />
-                <FaStar className="fill-[#FFC000]" />
+                {
+                    data.map(() => (
+                        <FaStar className="fill-[#FFC000]" /> 
+                    ))
+                }
               </span>
               <div className="flex items-center justify-between">
                 <div>
@@ -108,8 +112,8 @@ function Testimonials() {
                   <h1 className="text-white">{data[num].address}</h1>
                 </div>
                 <div className="px-16 text-[32px] flex gap-4 text-white">
-                  <FaArrowRight className="rotate-180 cursor-pointer" />
-                  <FaArrowRight className="cursor-pointer" />
+                  <FaArrowRight className="rotate-180 cursor-pointer" onClick={() => setNum(Math.floor(Math.random()* data.length))} />
+                  <FaArrowRight className="cursor-pointer" onClick={() => setNum(Math.floor(Math.random()* data.length))} />
                 </div>
               </div>
             </div>
