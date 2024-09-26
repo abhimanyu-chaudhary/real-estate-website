@@ -1,12 +1,12 @@
 import React from 'react'
-import iphone from './public/iphone'
+import iphone from './../../../public/iphone.png'
 
 function Download() {
   return (
-    <div className='w-[1245px] absolute top-[6200px] h-[200px] flex justify-between items-center mb-40'>
-      <div className='w-[408px] h-[692px] rounded-tr-[70px] rounded-br-[70px] bg-[#27AD77]'>
-        <div className='w-[600px] h-[500px] bg-[#E6E6E6] relative right-[100px] top-[100px] rounded-[16px]'>
-            <img className='object-fill rounded-[16px] w-full h-full' src="" alt="" />
+    <div className='w-[1245px] h-[792px] absolute top-[6200px]  flex justify-between items-center mb-40'>
+      <div className='w-[408px] h-[792px] rounded-tr-[70px] rounded-br-[70px] bg-[#27AD77]'>
+        <div className='relative top-[40px] left-[150px] rounded-[16px]'>
+            <img className='object-fill rounded-[16px] w-[357px] h-[712px] ' src={iphone} alt="" />
         </div>
       </div>
       <div>
