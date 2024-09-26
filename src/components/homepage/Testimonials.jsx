@@ -21,6 +21,7 @@ function Testimonials() {
       heading: "A Perfect Home in a Quiet Neighborhood",
       matter:
         "The house exceeded our expectations! It’s located in a peaceful area, with great amenities nearby. The layout is fantastic, and our kids loved the spacious rooms. We would definitely recommend this property to other families!",
+      image: "https://images.unsplash.com/photo-1583847268964-b28dc8f51f92?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
     },
     {
       id: 3,
@@ -29,6 +30,7 @@ function Testimonials() {
       heading: "Beautiful and Modern House",
       matter:
         "We couldn’t have asked for a better experience. The house is modern, well-maintained, and has all the features we were looking for. It’s close to schools and parks, making it ideal for families. A great place to call home!",
+        image: "https://images.unsplash.com/photo-1618220179428-22790b461013?q=80&w=1527&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
     },
     {
       id: 4,
@@ -37,6 +39,7 @@ function Testimonials() {
       heading: "Fantastic House with Amazing Views",
       matter:
         "The property is everything we wanted and more. Spacious rooms, stunning views, and excellent facilities. We felt comfortable and secure from day one. The neighborhood is family-friendly, and we’re so happy we made this choice!",
+        image: "https://images.unsplash.com/photo-1616046229478-9901c5536a45?q=80&w=1480&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
     },
     {
       id: 5,
@@ -45,6 +48,7 @@ function Testimonials() {
       heading: "A Home That’s Truly a Haven",
       matter:
         "This house is a real gem! The atmosphere is calm and inviting, and the attention to detail is remarkable. Our family instantly fell in love with the large backyard and cozy living spaces. Perfect for families who value comfort.",
+      image: "https://images.unsplash.com/photo-1615873968403-89e068629265?q=80&w=1632&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
     },
     {
       id: 6,
@@ -53,6 +57,7 @@ function Testimonials() {
       heading: "Charming House in a Prime Location",
       matter:
         "We were so impressed with the location and the house itself. Everything is nearby—shops, parks, schools—yet the neighborhood is quiet and peaceful. The house is clean, well-maintained, and perfect for a growing family.",
+      
     },
     {
       id: 7,
@@ -117,7 +122,9 @@ function Testimonials() {
                 </div>
               </div>
             </div>
-            <div className="w-[600px] h-[550px] bg-orange-200 rounded-[16px]"></div>
+            <div className="w-[600px] h-[550px] bg-orange-200 rounded-[16px]">
+              <img className="w-full h-full object-cover rounded-[16px]" src={data[num].image} alt="" />
+            </div>
         </div>
     </div>
   );
