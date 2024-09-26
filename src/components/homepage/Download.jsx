@@ -14,9 +14,9 @@ function Download() {
         </div>
       </div>
       <div>
-        <h1 className='w-[500px] text-[40px] font-semibold leading-tight '>Download The Application TO Find Your Dream House</h1>
-        <p className='w-[500px] py-5'>Looking for your perfect home? Our app makes it easier than ever! Explore a wide range of properties tailored to your needs with just a few taps. Whether you're searching for a cozy apartment, a spacious family home, or a luxury estate, our app provides detailed listings, virtual tours, and personalized recommendations to help you find your dream house.</p>
-        <p className='w-[500px]'>
+        <h1 className='w-[600px] text-[40px] font-semibold leading-tight '>Download The Application To Find Your Dream House</h1>
+        <p className='w-[600px] py-5'>Looking for your perfect home? Our app makes it easier than ever! Explore a wide range of properties tailored to your needs with just a few taps. Whether you're searching for a cozy apartment, a spacious family home, or a luxury estate, our app provides detailed listings, virtual tours, and personalized recommendations to help you find your dream house.</p>
+        <p className='w-[600px]'>
         Download now and start your journey to your ideal home today!
         </p>
         <div className='flex my-8'>
