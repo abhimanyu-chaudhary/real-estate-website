@@ -5,6 +5,7 @@ import Accordion from './Accordion';
 import Loan from './Loan';
 import Category from './Category';
 import Testimonials from './Testimonials';
+import Download from './Download';
 
 function Homepage() {
   return (
@@ -14,6 +15,7 @@ function Homepage() {
       <Loan />
       <Category />
       <Testimonials />
+      <Download />
     </div>
   )
 }
