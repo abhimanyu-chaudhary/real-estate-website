@@ -20,8 +20,8 @@ function Download() {
         Download now and start your journey to your ideal home today!
         </p>
         <div className='flex my-8'>
-            <img src={playStore} alt="" />
-            <img src={appStore} alt="" />
+            <img className='cursor-pointer' src={playStore} alt="" />
+            <img className='cursor-pointer' src={appStore} alt="" />
         </div>
       </div>
     </div>
