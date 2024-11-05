@@ -1,6 +1,6 @@
 import React from 'react'
-import iphone from './../../../public/iphone.png'
-import screen from './../../../public/screen.png'
+import iphone from './../../../public/iPhone.png'
+import screen from './../../../public/Screen.png'
 import appStore from './../../../public/Appstore Logo.png'
 import playStore from './../../../public/Google Play Logo.png' 
 
